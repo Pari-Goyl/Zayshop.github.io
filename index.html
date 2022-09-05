@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .bg-light{
+            background-color: #E9EEF5 !important;
+        }
+        .text-success{
+            color: #59ab6e !important;
+        }
+        .bg-success{
+            background-color: #59ab6e !important;
+        }
+        .bg-dark{
+            background-color: #212934 !important;
+        }
+        .bg-black{
+            background-color: #1D242D !important;
+        }
+        .text-muted{
+            color: #BCBCBC !important;
+        }
+        .text-light{
+            color: #CFD6E1 !important;
+        }
+        .border-light{
+            border-color: #2d343f !important;
+        }
+        #templatemo_nav_top {
+            font-size: .8em !important;
+        }
+
+        #navbar1 .badge-icon {
+            position: relative;
+        }
+
+        #navbar1 .badge {
+            top: -8px;
+            left: 10px;
+        }
+
+        #search .modal-body {
+            width: 100%;
+        }
+
+        #showcase{
+            background-color: #EFEFEF;
+        }
+
+        #showcase .carousel-indicators button{
+            background-color: #59ab6e;
+        }
+        #showcase i.fa{
+            color: #59ab6e !important;
+            font-size: 2.8em !important;
+        }
+        #showcase .flex-column .fs-2{
+            font-weight: 300;
+        }
+        #showcase .flex-column .display-5{
+            font-weight: 100;
+        }
+        .hover-success:hover{
+            color: #59ab6e;
+            cursor: pointer;
+        }
+        .foot-icons{
+            padding: 10px 15px;
+            padding-right: 8px;
+        }
+        .foot-icons .bi-linkedin{
+            padding-right: 6px;
+        }
+        .foot-icons:hover{
+            color: #212529 !important;
+            background-color: #E9EEF5;
+        }
+
+        @media(min-width: 768px) {
+            #search .modal-body {
+                width: 50%;
+            }
+            .col-md-6 .input-group{
+                width: 90%;
+            }
+        }
+        @media(min-width: 992px) {
+            .col-md-6 .input-group{
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark d-xl-block d-none" id="templatemo_nav_top">
+        <div class="container mb-1">
+            <a class="navbar-sm-brand text-light text-decoration-none" href="#">
+                <span><i class="bi bi-envelope-fill mx-2"></i>info@company.com</span>
+                <span><i class="bi bi-telephone-fill mx-2"></i>010-020-0340</span>
+            </a>
+            <div>
+                <a class="text-light mx-1 text-decoration-none" href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a class="text-light mx-1 text-decoration-none" href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a class="text-light mx-1 text-decoration-none" href="#">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a class="text-light mx-1 text-decoration-none" href="#">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+            <a href="zay-shop.html" class="navbar-brand text-success fs-1 fw-bold">Zay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="nav navbar-nav mx-lg-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-4 fs-5" href="zay-shop.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-4 fs-5" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-4 fs-5" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-4 fs-5" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <span class="fs-5" data-bs-toggle="modal" data-bs-target="#search"><i
+                            class="bi bi-search"></i></span>
+                    <div class="badge-icon fs-5 mx-3">
+                        <i class="bi bi-cart-check-fill"></i>
+                        <span class="badge position-absolute rounded-pill text-dark bg-light">7</span>
+                    </div>
+                    <div class="badge-icon fs-5 mx-1">
+                        <i class="bi bi-person-fill"></i>
+                        <span class="badge position-absolute rounded-pill text-dark bg-light">+99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Search Modal -->
+    <div class="modal fade" id="search" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close me-lg-auto" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body mx-auto">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Search...">
+                        <button type="submit" class="input-group-text bg-success">
+                            <i class="bi bi-search text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- showcase -->
+    <section id="showcase" class="w-100">
+        <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row p-5">
+                            <div class="col-lg-6 col-md-8 mx-auto order-lg-last">
+                                <img class="img-fluid" src="https://technext.github.io/zay-shop/assets/img/banner_img_01.jpg" alt="">
+                            </div>
+                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                <h1 class="text-success display-5">
+                                    <span class="fw-bold">Zay</span>
+                                    <span class="fw-lighter">eCommerce</span>
+                                </h1>
+                                <div class="fs-2">Tiny and Perfect eCommerce Template</div>
+                                <p class="lead">Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1). This template is 100% free provided by <a class="text-success" href="https://templatemo.com/" target="_blank">TemplateMo</a> website. Image credits go to <a href="https://storyset.com/" class="text-success" target="_blank">Freepik Stories</a>, <a href="https://unsplash.com/" class="text-success">Unsplash</a> and <a href="https://icons8.com/" class="text-success" target="_blank">Icons 8</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row p-5">
+                            <div class="col-lg-6 col-md-8 mx-auto order-lg-last">
+                                <img class="img-fluid" src="https://technext.github.io/zay-shop/assets/img/banner_img_02.jpg" alt="">
+                            </div>
+                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                <h1 class="display-5 fw-lighter">Proident occaecat</h1>
+                                <div class="fs-2">Aliquip ex ea commodo consequat</div>
+                                <p class="lead">You are permitted to use this Zay CSS template for your commercial websites. You are <span class="fw-normal">not permitted</span> to re-distribute the template ZIP file in any kind of template collection websites.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <img src="https://technext.github.io/zay-shop/assets/img/banner_img_02.jpg" class="img-fluid" alt="..."> -->
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row p-5">
+                            <div class="col-lg-6 col-md-8 mx-auto order-lg-last">
+                                <img class="img-fluid" src="https://technext.github.io/zay-shop/assets/img/banner_img_03.jpg" alt="">
+                            </div>
+                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                <h1 class="display-5 fw-lighter">Repr in voluptate</h1>
+                                <div class="fs-2">Ullamco laboris nisi ut</div>
+                                <p class="lead">We bring you 100% free CSS templates for your websites. If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <img src="https://technext.github.io/zay-shop/assets/img/banner_img_03.jpg" class="img-fluid" alt="..."> -->
+                </div>
+            </div>
+            <button class="carousel-control-prev justify-content-start p-3" type="button" data-bs-target="#carouselIndicators"
+                data-bs-slide="prev">
+                <i class="fa fa-chevron-left"></i>              
+            </button>
+            <button class="carousel-control-next justify-content-end p-3" type="button" data-bs-target="#carouselIndicators"
+            data-bs-slide="next">
+                <i class="fa fa-chevron-right"></i>    
+            </button>
+        </div>
+    </section>
+
+    <!-- category section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center py-3">
+                <div class="col-12">
+                    <h1 class="display-5 fw-light">Categories of The Month</h1>
+                </div>
+                <div class="col-md-7">
+                    <p class="lead">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="row text-center mt-3">
+                <div class="col-md-4 p-5">
+                    <a href="#">
+                        <img src="https://technext.github.io/zay-shop/assets/img/category_img_01.jpg" alt="" class="img-fluid rounded-circle border">
+                    </a>
+                    <h4 class="my-3">Watches</h4>
+                    <a href="#" class="btn btn-success fw-light fs-5">Go Shop</a>
+                </div>
+                <div class="col-md-4 p-5">
+                    <a href="#">
+                        <img src="https://technext.github.io/zay-shop/assets/img/category_img_02.jpg" alt="" class="img-fluid rounded-circle border">
+                    </a>
+                    <h4 class="my-3">Shoes</h4>
+                    <a href="#" class="btn btn-success fw-light fs-5">Go Shop</a>
+                </div>
+                <div class="col-md-4 p-5">
+                    <a href="#">
+                        <img src="https://technext.github.io/zay-shop/assets/img/category_img_03.jpg" alt="" class="img-fluid rounded-circle border">
+                    </a>
+                    <h4 class="my-3">Accessories</h4>
+                    <a href="#" class="btn btn-success fw-light fs-5">Go Shop</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center py-3">
+                <div class="col-12">
+                    <h1 class="display-5 fw-light">Featured Product</h1>
+                </div>
+                <div class="col-md-7">
+                    <p class="lead">Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://technext.github.io/zay-shop/assets/img/feature_prod_01.jpg" alt="">
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-muted bi bi-star-fill"></i>
+                                    <i class="fs-5 text-muted bi bi-star-fill"></i>
+                                </li>
+                                <li class="fs-5 text-muted">$240.00</li>
+                            </ul>
+                            <div class="fs-2 fw-light">Gym Weight</div>
+                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui deserunt.</p>
+                            <p class="lead text-muted">Reviews (24)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://technext.github.io/zay-shop/assets/img/feature_prod_02.jpg" alt="">
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-muted bi bi-star-fill"></i>
+                                    <i class="fs-5 text-muted bi bi-star-fill"></i>
+                                </li>
+                                <li class="fs-5 text-muted">$480.00</li>
+                            </ul>
+                            <div class="fs-2 fw-light">Cloud Nike Shoes</div>
+                            <p class="lead">Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.</p>
+                            <p class="lead text-muted">Reviews (48)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://technext.github.io/zay-shop/assets/img/feature_prod_03.jpg" alt="">
+                        <div class="card-body">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                    <i class="fs-5 text-warning bi bi-star-fill"></i>
+                                </li>
+                                <li class="fs-5 text-muted">$360.00</li>
+                            </ul>
+                            <div class="fs-2 fw-light">Summer Addides Shoes</div>
+                            <p class="lead">Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.</p>
+                            <p class="lead text-muted">Reviews (72)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h2 class="h2 text-success border-bottom border-light pb-3 mb-4">Zay Shop</h2>
+                    <ul class="list-unstyled text-light ">
+                        <li class="lead my-2">
+                            <i class="bi bi-geo-alt-fill"></i> 123 Consectetur al ligula 10660
+                        </li>
+                        <li class="lead my-2">
+                           <i class="bi bi-telephone-fill"></i><span class="hover-success"> 010-020-0340</span>
+                        </li>
+                        <li class="lead my-2">
+                           <i class="bi bi-envelope-fill"></i><span class="hover-success"> info@company.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h2 text-light fw-light border-bottom border-light pb-3 mb-4">Products</h2>
+                    <ul class="list-unstyled text-light ">
+                        <li class="lead my-2 hover-success">Luxury</li>
+                        <li class="lead my-2 hover-success">Sport Wear</li>
+                        <li class="lead my-2 hover-success">Men's Shoes</li>
+                        <li class="lead my-2 hover-success">Women's Shoes</li>
+                        <li class="lead my-2 hover-success">Popular Dress</li>
+                        <li class="lead my-2 hover-success">Gym Accessories</li>
+                        <li class="lead my-2 hover-success">Sport Shoes</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="h2 text-light fw-light border-bottom border-light pb-3 mb-4">Further Info</h2>
+                    <ul class="list-unstyled text-light ">
+                        <li class="lead my-2 hover-success">Home</li>
+                        <li class="lead my-2 hover-success">About Us</li>
+                        <li class="lead my-2 hover-success">Shop Locations</li>
+                        <li class="lead my-2 hover-success">FAQs</li>
+                        <li class="lead my-2 hover-success">Contact</li>
+                    </ul>
+                </div>
+                <div class="col-12 border-top border-light"></div>
+                <div class="row pt-4 text-light">
+                    <div class="col-md-6 mb-md-0 mb-4">
+                         <a href="#" class="foot-icons text-light text-decoration-none border border-light fs-4 rounded-circle text-center me-2">
+                            <i class="bi bi-facebook"></i>
+                         </a>
+                         <a href="#" class="foot-icons text-light text-decoration-none border border-light fs-4 rounded-circle text-center me-2">
+                            <i class="bi bi-instagram"></i>
+                         </a>
+                         <a href="#" class="foot-icons text-light text-decoration-none border border-light fs-4 rounded-circle text-center me-2">
+                            <i class="bi bi-twitter"></i>
+                         </a>
+                         <a href="#" class="foot-icons text-light text-decoration-none border border-light fs-4 rounded-circle text-center">
+                            <i class="bi bi-linkedin"></i>
+                         </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group ms-md-auto">
+                            <input type="email" class="form-control bg-dark text-light border border-light fs-5" placeholder="Email address">
+                            <input type="submit" class="input-group-text bg-success text-white fs-5 fw-light border-0" value="Subscribe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- copyright -->
+    <footer class="py-4 bg-black text-light">
+        <div class="container">
+            <p class="lead">Copyright &copy; 2021 Company Name | Designed by <a href="" class="text-light hover-success">TemplateMo</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+<!-- Content Here 
+    icons--
+        <i class="bi bi-search"></i>
+        <i class="bi bi-cart-check-fill"></i>
+        <i class="bi bi-person-fill"></i>
+        <i class="bi bi-envelope-fill"></i>
+        <i class="bi bi-telephone-fill"></i>
+        <i class="bi bi-envelope"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-geo-alt-fill"></i> /*location*/
+    images--
+        https://technext.github.io/zay-shop/assets/img/banner_img_01.jpg
+        https://technext.github.io/zay-shop/assets/img/banner_img_02.jpg
+        https://technext.github.io/zay-shop/assets/img/banner_img_03.jpg
+
+        https://technext.github.io/zay-shop/assets/img/category_img_01.jpg
+        https://technext.github.io/zay-shop/assets/img/category_img_02.jpg
+        https://technext.github.io/zay-shop/assets/img/category_img_03.jpg
+
+        https://technext.github.io/zay-shop/assets/img/feature_prod_01.jpg
+        https://technext.github.io/zay-shop/assets/img/feature_prod_02.jpg
+        https://technext.github.io/zay-shop/assets/img/feature_prod_03.jpg
+-->
